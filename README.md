@@ -2,9 +2,12 @@
 
 Distanz Game ist im Rahmen des Infoprojekts im 2. Semesters der EAH JENA im Studiengang Elektrotechnik und Informationstechnik bzw. Automatisierungstechnik und Informationstechnik international der Studenten Ruben Saitz, Markus Alter, Erik Leidenfrost und Frederike Otto enstandenes Spiel
     
+![Alt text](https://i.ibb.co/Q6MQdnj/Distanz-Game-14-07-2020-11-26-22.png)
+mehr Bilder unten!
+
 # Installation
 
- - in [Releases]() herunterladen und entpacken.
+ - in [Releases](https://github.com/RubiRubsn/Distanz_Game/releases) herunterladen und entpacken.
  - in dem Ordner die Distanz-Game.exe starten
  - eine Meldung vom Defender öffnet sich, dass das Programm von einem unbekannten Entwickler ist ( ist ja klar)
  - auf Infos einblenden *klicken* und dann auf trotzdem ausführen *klicken*
@@ -127,6 +130,14 @@ Distanz Game ist im Rahmen des Infoprojekts im 2. Semesters der EAH JENA im Stud
 ### Endanpassung:
 - ~~Musik und SFX Default auf lvl 2~~
 - ~~Ki Feinschliff. Bei Zugerzeugung Abhängigkeit von Aktivität des Königs erzeugen -> der König wird nicht mehr so greedy~~
+
+# Mehr Bilder!
+
+![](https://i.ibb.co/6RZRqZC/Distanz-Game-14-07-2020-11-26-50.png)
+![](https://i.ibb.co/GvZJPds/Distanz-Game-14-07-2020-11-57-31.png)
+![](https://i.ibb.co/YDtfYbf/Distanz-Game-14-07-2020-11-26-56.png)
+![](https://i.ibb.co/yRmJqxp/Distanz-Game-14-07-2020-11-28-40.png)
+
 
 ### Lizenz!
 
