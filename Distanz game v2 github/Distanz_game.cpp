@@ -105,6 +105,7 @@ void singleplayer_game(engine &engine, stein_src &steine_schwarz, stein_src &ste
 				KI_daten.spieler = false;
 				if (DEBUG) std::cout << "loading\n";
 				//aufruf der Ki um Naeheres zu erfahren siehe KI_src.cpp / .h
+				std::cout << KI_daten.steine[0].spiel_stein[3].aktiv;
 				Ki.ki_iter(engine, 0, KI_daten, ki_feed.nichts, ki_feed.end_pos, ki_feed.stein);
 				if (DEBUG) std::cout << " --- Ende\n";
 			}
@@ -149,7 +150,7 @@ void multiplayer_game(engine& engine, stein_src &steine_schwarz, stein_src &stei
 }
 
 /*Funktion zum Reset bei einem Game neustart*/
-void steine_reset(engine &engine, stein_src &steine_schwarz, stein_src &steine_weiss, ki_daten &KI_daten) {
+void steine_reset(engine &engine, stein_src &steine_schwarz, stein_src &steine_weiss, ki_daten &KI_daten, timer_dat &timer_dat) {
 	//weiß beginnt
 	engine.spieler = true;
 	//steinpositionen festlegen
@@ -168,6 +169,8 @@ void steine_reset(engine &engine, stein_src &steine_schwarz, stein_src &steine_w
 	//engine variablen zuruecksetzen
 	engine.reset = false;
 	engine.ende = 0;
+	timer_dat.timer = 0;
+	timer_dat.timer_zustand = false;
 }
 
 /*Funktion zum speichern von einstellungen*/
@@ -204,7 +207,7 @@ int main() {
 
 		/*spiel zurueck setzen*/
 		if (engine.reset) {
-			steine_reset(engine, steine_schwarz, steine_weiss, KI_daten);
+			steine_reset(engine, steine_schwarz, steine_weiss, KI_daten, timer_dat);
 		}
 		switch (engine.gamestate) {
 		case 0:

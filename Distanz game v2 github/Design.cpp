@@ -171,7 +171,7 @@ void Design::Endscreen(engine& engine) {
         koordinate button_wert = engine.cursor_hover_pos;
      
       if (engine.ende == 1 || engine.ende == 2) {
-        if (button_wert.x != 1) {
+        if (button_wert.x != 80) {
             GL_koordinate Hauptmenue_endscreen[4] = { {-0.65f, -0.49f},{-0.15f, -0.49f},{-0.15f, -0.62f},{-0.65f,-0.62f} }; //Hauptmenü
             engine.zeichnen.polygon(Hauptmenue_endscreen, Textur, 4, 112);
         }
@@ -179,7 +179,7 @@ void Design::Endscreen(engine& engine) {
             GL_koordinate Hauptmenue_endscreen_pressed[4] = { {-0.65f, -0.49f},{-0.15f, -0.49f},{-0.15f, -0.62f},{-0.65f,-0.62f} }; //Hauptmenü pressed
             engine.zeichnen.polygon(Hauptmenue_endscreen_pressed, Textur, 4, 16);
         }
-        if (button_wert.x != 2) {
+        if (button_wert.x != 81) {
             GL_koordinate neustart[4] = { {0.15f, -0.49f}, { 0.65f, -0.49f }, { 0.65f,  -0.62f}, { 0.15f, -0.62f } }; // neustart
             engine.zeichnen.polygon(neustart, Textur, 4, 110);
         }
@@ -194,7 +194,7 @@ void Design::Einstellung_Interface(engine& engine) {
     GL_koordinate HG[4] = { {-1.0f, 1.0f},{1.0f,1.0f},{1.0f,-1.0f},{-1.0,-1.0f} }; //Hintergrund
     engine.zeichnen.polygon(HG, Textur, 4, 70);
     koordinate button_wert = engine.cursor_hover_pos;
-    if (button_wert.x != 1) {
+    if (button_wert.x != 50) {
         GL_koordinate exit[4] = { {-0.2f, -0.575f},{0.2f, -0.575f},{0.2f, -0.695f},{-0.2f,-0.695f} }; //zurück
         engine.zeichnen.polygon(exit, Textur, 4, 89);
     }
@@ -210,7 +210,7 @@ void Design::Einstellung_Interface(engine& engine) {
     engine.zeichnen.polygon(ki_modus, Textur, 4, 74);
 
     if (engine.ki_lvl == 0) {
-        if (button_wert.x != 2) {
+        if (button_wert.x != 51) {
             GL_koordinate leicht[4] = { {-0.65f, 0.32f},{-0.15f, 0.32f},{-0.15f, 0.2f},{-0.65f,0.2f} }; // leicht
             engine.zeichnen.polygon(leicht, Textur, 4, 75);
         }
@@ -220,7 +220,7 @@ void Design::Einstellung_Interface(engine& engine) {
         }
     }
     else if (engine.ki_lvl == 1) {
-        if (button_wert.x != 2) {
+        if (button_wert.x != 51) {
             GL_koordinate schwer[4] = { {-0.65f, 0.32f},{-0.15f, 0.32f},{-0.15f, 0.2f},{-0.65f,0.2f} }; // schwer
             engine.zeichnen.polygon(schwer, Textur, 4, 77);
         }
@@ -234,7 +234,7 @@ void Design::Einstellung_Interface(engine& engine) {
     engine.zeichnen.polygon(zugvorschau, Textur, 4, 79);
 
     if (engine.zugvorschau_lvl == 2) {
-        if (button_wert.x != 3) {
+        if (button_wert.x != 52) {
             GL_koordinate alle_zuege[4] = { {-0.65f, -0.12f},{-0.15f, -0.12f},{-0.15f, -0.24f},{-0.65f,-0.24f} }; // alle zuege
             engine.zeichnen.polygon(alle_zuege, Textur, 4, 80);
         }
@@ -244,7 +244,7 @@ void Design::Einstellung_Interface(engine& engine) {
         }
     }
     else if (engine.zugvorschau_lvl == 1) {
-        if (button_wert.x != 3) {
+        if (button_wert.x != 52) {
             GL_koordinate eigene_zuege[4] = { {-0.65f, -0.12f},{-0.15f, -0.12f},{-0.15f, -0.24f},{-0.65f,-0.24f} }; // eigene zuege
             engine.zeichnen.polygon(eigene_zuege, Textur, 4, 82);
         }
@@ -254,7 +254,7 @@ void Design::Einstellung_Interface(engine& engine) {
         }
     }
     else if (engine.zugvorschau_lvl == 0) {
-        if (button_wert.x != 3) {
+        if (button_wert.x != 52) {
             GL_koordinate zuege_aus[4] = { {-0.65f, -0.12f},{-0.15f, -0.12f},{-0.15f, -0.24f},{-0.65f,-0.24f} }; // züge aus
             engine.zeichnen.polygon(zuege_aus, Textur, 4, 84);
         }
@@ -272,23 +272,23 @@ void Design::Einstellung_Interface(engine& engine) {
 
     GL_koordinate Musik_slider[4] = { {0.05f, 0.105f}, { 0.75f, 0.105f  }, { 0.75f, -0.015f }, { 0.05f,-0.015f } }; // Musik Slider
     engine.zeichnen.polygon(Musik_slider, Textur, 4, 72);
-    if (engine.sound.music_lvl == 0 && button_wert.x == 5) {
+    if (engine.sound.music_lvl == 0 && button_wert.x == 53) {
         GL_koordinate Musik_slider_knopf[4] = { {0.09f, 0.105f}, { 0.122f, 0.105f  }, { 0.122f, -0.015f }, { 0.09f,-0.015f } }; // Musik Slider knopf pos 1
         engine.zeichnen.polygon(Musik_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.music_lvl == 1 && button_wert.x == 6) {
+    else if (engine.sound.music_lvl == 1 && button_wert.x == 54) {
         GL_koordinate Musik_slider_knopf[4] = { {0.244f, 0.105f}, { 0.276f, 0.105f  }, { 0.276f, -0.015f }, { 0.244f,-0.015f } }; // Musik Slider knopf pos 2
         engine.zeichnen.polygon(Musik_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.music_lvl == 2 && button_wert.x == 7) {
+    else if (engine.sound.music_lvl == 2 && button_wert.x == 55) {
         GL_koordinate Musik_slider_knopf[4] = { {0.384f, 0.105f}, { 0.416f, 0.105f  }, { 0.416f, -0.015f }, { 0.384f,-0.015f } }; // Musik Slider knopf pos 3
         engine.zeichnen.polygon(Musik_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.music_lvl == 3 && button_wert.x ==  8) {
+    else if (engine.sound.music_lvl == 3 && button_wert.x ==  56) {
         GL_koordinate Musik_slider_knopf[4] = { {0.524f, 0.105f}, { 0.556f, 0.105f  }, { 0.556f, -0.015f }, { 0.524f,-0.015f } }; // Musik Slider knopf pos 4
         engine.zeichnen.polygon(Musik_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.music_lvl == 4 && button_wert.x == 9) {
+    else if (engine.sound.music_lvl == 4 && button_wert.x == 57) {
         GL_koordinate Musik_slider_knopf[4] = { {0.678f, 0.105f}, { 0.71f, 0.105f  }, { 0.71f, -0.015f }, { 0.678f,-0.015f } }; // Musik Slider knopf pos 5
         engine.zeichnen.polygon(Musik_slider_knopf, Textur, 4, 91);
     }
@@ -322,23 +322,23 @@ void Design::Einstellung_Interface(engine& engine) {
     GL_koordinate fx_slider[4] = { {0.05f, -0.335f}, { 0.75f, -0.335f  }, { 0.75f, -0.455f }, { 0.05f,-0.455f } }; // fx Slider
     engine.zeichnen.polygon(fx_slider, Textur, 4, 72);
    
-    if (engine.sound.fx_lvl == 0 && button_wert.x == 10) {
+    if (engine.sound.fx_lvl == 0 && button_wert.x == 60) {
         GL_koordinate fx_slider_knopf[4] = { {0.09f, -0.335f}, { 0.122f,-0.335f }, { 0.122f, -0.455f }, { 0.09f,-0.455f } }; // fx Slider knopf pos 1
         engine.zeichnen.polygon(fx_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.fx_lvl == 1 && button_wert.x == 11) {
+    else if (engine.sound.fx_lvl == 1 && button_wert.x == 61) {
         GL_koordinate fx_slider_knopf[4] = { {0.244f, -0.335f}, { 0.276f, -0.335f  }, { 0.276f, -0.455f }, { 0.244f,-0.455f } }; // fx Slider knopf pos 2
         engine.zeichnen.polygon(fx_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.fx_lvl == 2 && button_wert.x == 12) {
+    else if (engine.sound.fx_lvl == 2 && button_wert.x == 62) {
         GL_koordinate fx_slider_knopf[4] = { {0.384f, -0.335f}, { 0.416f, -0.335f  }, { 0.416f, -0.455f}, { 0.384f,-0.455f } }; // fx Slider knopf pos 3
         engine.zeichnen.polygon(fx_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.fx_lvl == 3 && button_wert.x ==  13) {
+    else if (engine.sound.fx_lvl == 3 && button_wert.x ==  63) {
         GL_koordinate fx_slider_knopf[4] = { {0.524f, -0.335f}, { 0.556f, -0.335f  }, { 0.556f, -0.455f }, { 0.524f,-0.455f } }; // fx Slider knopf pos 4
         engine.zeichnen.polygon(fx_slider_knopf, Textur, 4, 91);
     }
-    else if (engine.sound.fx_lvl == 4 && button_wert.x == 14) {
+    else if (engine.sound.fx_lvl == 4 && button_wert.x == 64) {
         GL_koordinate fx_slider_knopf[4] = { {0.678f, -0.335f}, { 0.71f,-0.335f  }, { 0.71f, -0.455f }, { 0.678f,-0.455f } }; // fx Slider knopf pos 5
         engine.zeichnen.polygon(fx_slider_knopf, Textur, 4, 91);
     }
@@ -422,11 +422,11 @@ void Design::Interface(engine& engine) {
  }
 
 /*funktion zum printen von ziffern*/
-void Design::print(engine& engine, int arr[]) {
+void Design::print(engine& engine, int zahlen[]) {
     GL_koordinate tex[5][4];
     for (int x = 0; x < 5; x++) {
         if (x != 2) {
-            switch (arr[x])
+            switch (zahlen[x])
             {
             case 0:         //0
                 tex[x][0] = { 0.8f,0.3f };

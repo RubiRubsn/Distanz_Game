@@ -72,8 +72,8 @@ mehr Bilder unten!
 
 ### Aufteilung
 - Markus Alter: Design, Hauptmenü, Spielstein_handle
-- Erik Leidenfrost:textur_res,Spielstein_handle, struct_src
-- Frederike Otto: Save,Spielstein_handle,textur_res, Testfälle
+- Erik Leidenfrost: textur_res, Spielstein_handle, struct_src
+- Frederike Otto: Save, Spielstein_handle, textur_res, Testfälle
 - Ruben Saitz:  Engine, KI , Sound, Main
 - in gemeinsamer Arbeit enstanden: Klassendiagramm, Präsentation , Texturen, PAP
 

@@ -13,7 +13,7 @@ private:
 	void Endscreen(engine& engine);
 	void Spielfeld(engine& engine);
 	void Interface(engine& engine);
-	void print(engine& engine, int arr[]);
+	void print(engine& engine, int zahlen[]);
 	void Einstellung_Interface(engine& engine);
 public:
 	void Spielstein(engine& engine, stein_src stein, bool spieler);

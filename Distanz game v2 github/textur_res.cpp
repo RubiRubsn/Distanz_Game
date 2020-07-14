@@ -1293,78 +1293,64 @@ void engine::Zeichnen::polygon(GL_koordinate Punkt[], GL_koordinate TexPunkt[], 
 		glEnable(GL_TEXTURE_2D);
 		break;
 	case 74:
-		//ki modus
 		glBindTexture(GL_TEXTURE_2D, ki_modus);
 		glEnable(GL_TEXTURE_2D);
 		break;
 	case 75:
 		glBindTexture(GL_TEXTURE_2D, leicht);
 		glEnable(GL_TEXTURE_2D);
-		//leicht
 		break;
 	case 76:
 		glBindTexture(GL_TEXTURE_2D, leicht_pressed);
 		glEnable(GL_TEXTURE_2D);
-		//leicht pressed
 		break;
 	case 77:
 		glBindTexture(GL_TEXTURE_2D, schwer);
 		glEnable(GL_TEXTURE_2D);
-		//schwer
 		break;
 	case 78:
 		glBindTexture(GL_TEXTURE_2D, schwer_pressed);
 		glEnable(GL_TEXTURE_2D);
-		//schwer pressed
 		break;
 	case 79:
 		glBindTexture(GL_TEXTURE_2D, zugvorschau);
 		glEnable(GL_TEXTURE_2D);
-		//zugvorschau
 		break;
 	case 80:
 		glBindTexture(GL_TEXTURE_2D, alle_zuege);
 		glEnable(GL_TEXTURE_2D);
-		//alle zuege
 		break;
 	case 81:
 		glBindTexture(GL_TEXTURE_2D, alle_zuege_pressed);
 		glEnable(GL_TEXTURE_2D);
-		//alle zuege pressed
 		break;
 	case 82:
 		glBindTexture(GL_TEXTURE_2D, eigene_zuege);
 		glEnable(GL_TEXTURE_2D);
 		break;
 	case 83:
-		//eigene zuege pressed
 		glBindTexture(GL_TEXTURE_2D, eigene_zuege_pressed);
 		glEnable(GL_TEXTURE_2D);
 		break;
 	case 84:
-		//aus
 		glBindTexture(GL_TEXTURE_2D, vorschau_aus);
 		glEnable(GL_TEXTURE_2D);
 		break;
 	case 85:
 		glBindTexture(GL_TEXTURE_2D, vorschau_aus_pressed);
 		glEnable(GL_TEXTURE_2D);
-		//aus_pressed
 		break;
 	case 86:
 		glBindTexture(GL_TEXTURE_2D, audio);
 		glEnable(GL_TEXTURE_2D);
-		//audion
 		break;
 	case 87:
 		glBindTexture(GL_TEXTURE_2D, musik);
 		glEnable(GL_TEXTURE_2D);
-		//musik
 		break;
 	case 88:
 		glBindTexture(GL_TEXTURE_2D, sound_fx);
 		glEnable(GL_TEXTURE_2D);
-		//fx
 		break;
 	case 89:
 		glBindTexture(GL_TEXTURE_2D, zurueck);

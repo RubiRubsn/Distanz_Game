@@ -44,8 +44,8 @@ void engine::Fenster() {
 	SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	//festlegen des Programmtitels und der Groeﬂe
-	/*32 Bit*/ //window = SDL_CreateWindow("Distanz - Game 32BIT", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_OPENGL);
-	/*64 Bit*/ window = SDL_CreateWindow("Distanz - Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_OPENGL);
+	/*32 Bit*/ window = SDL_CreateWindow("Distanz - Game 32BIT", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_OPENGL);
+	/*64 Bit*/ //window = SDL_CreateWindow("Distanz - Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_OPENGL);
 	SDL_GLContext glContext = SDL_GL_CreateContext(window);
 	SDL_SysWMinfo systemInfo;
 	SDL_VERSION(&systemInfo.version);
@@ -130,7 +130,7 @@ void engine::pos_mgr() {
 			cursor_klick_pos = { 100,100 };
 		}
 		//Zurueck_button
-		if (cursor_klick_pos.x == 1) {
+		if (cursor_klick_pos.x == 50) {
 			if (menue == 1) {
 				menue = 0;
 			}
@@ -141,12 +141,12 @@ void engine::pos_mgr() {
 			sound.play_sfx(1);
 		}
 		//ki_lvl_button
-		if (cursor_klick_pos.x == 2) {
+		if (cursor_klick_pos.x == 51) {
 			if (ki_lvl == 0) ki_lvl = 1; else ki_lvl = 0;
 			sound.play_sfx(1);
 		}
 		//zugvorschau_button
-		if (cursor_klick_pos.x == 3) {
+		if (cursor_klick_pos.x == 52) {
 			if (zugvorschau_lvl == 0) {
 				zugvorschau_lvl = 1;
 			}
@@ -159,53 +159,53 @@ void engine::pos_mgr() {
 			sound.play_sfx(1);
 		}
 		/*5-9 Musik slider*/
-		if (cursor_klick_pos.x == 5) {
+		if (cursor_klick_pos.x == 53) {
 			sound.music_lvl = 0;
 			sound.sound_tick_check(true);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 6) {
+		if (cursor_klick_pos.x == 54) {
 			sound.music_lvl = 1;
 			sound.sound_tick_check(true);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 7) {
+		if (cursor_klick_pos.x == 55) {
 			sound.music_lvl = 2;
 			sound.sound_tick_check(true);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 8) {
+		if (cursor_klick_pos.x == 56) {
 			sound.music_lvl = 3;
 			sound.sound_tick_check(true);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 9) {
+		if (cursor_klick_pos.x == 57) {
 			sound.music_lvl = 4;
 			sound.sound_tick_check(true);
 			sound.play_sfx(1);
 		}
-		/*10-140 sfx slider*/
-		if (cursor_klick_pos.x == 10) {
+		/*10-14 sfx slider*/
+		if (cursor_klick_pos.x == 60) {
 			sound.fx_lvl = 0;
 			sound.sound_tick_check(false);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 11) {
+		if (cursor_klick_pos.x == 61) {
 			sound.fx_lvl = 1;
 			sound.sound_tick_check(false);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 12) {
+		if (cursor_klick_pos.x == 62) {
 			sound.fx_lvl = 2;
 			sound.sound_tick_check(false);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 13) {
+		if (cursor_klick_pos.x == 63) {
 			sound.fx_lvl = 3;
 			sound.sound_tick_check(false);
 			sound.play_sfx(1);
 		}
-		if (cursor_klick_pos.x == 14) {
+		if (cursor_klick_pos.x == 64) {
 			sound.fx_lvl = 4;
 			sound.sound_tick_check(false);
 			sound.play_sfx(1);
@@ -213,7 +213,7 @@ void engine::pos_mgr() {
 		cursor_hover_pos = maus.settings_klick(maus.mausposition());
 		/*Hover sound*/
 		if (cursor_hover_pos.x != 100 && hover_einmalig) {
-			if (cursor_hover_pos.x < 5 || cursor_hover_pos.x>14) {
+			if (cursor_hover_pos.x < 53 || cursor_hover_pos.x>64) {
 				sound.play_sfx(3);
 				hover_einmalig = false;
 			}
@@ -283,7 +283,7 @@ void engine::pos_mgr() {
 		}
 		cursor_hover_pos = maus.endscreen_klick(maus.mausposition());
 		//Hauptmenue Button
-		if (cursor_klick_pos.x == 1) {
+		if (cursor_klick_pos.x == 80) {
 			gamestate = 0;
 			menue = 3;
 			reset = true;
@@ -292,7 +292,7 @@ void engine::pos_mgr() {
 			sound.play_sfx(1);
 		}
 		//Nochmal Button
-		if (cursor_klick_pos.x == 2) {
+		if (cursor_klick_pos.x == 81) {
 			menue = 0;
 			reset = true;
 			zeit_setzen(time(0));
@@ -692,56 +692,56 @@ koordinate engine::Maus::spielfeld_klick(GL_koordinate pos) {
 koordinate engine::Maus::settings_klick(GL_koordinate pos) {
 	koordinate erg;
 	if(pos.x>=-0.2 && pos.x <0.2 && pos.y <=-0.575 && pos.y > -0.695) { // zur¸ck
-			erg.x = 1;
-			erg.y = 1;																		
+			erg.x = 50;
+			erg.y = 50;
 	}else if(pos.x>=-0.65 && pos.x <-0.15 && pos.y <=0.32 && pos.y > 0.2) { // leicht/schwer
-			erg.x = 2;
-			erg.y = 2;																		
+		erg.x = 51;
+			erg.y = 51;																		
 	}else if(pos.x>=-0.65 && pos.x <-0.15 && pos.y <=-0.12 && pos.y > -0.24) { // zugvorschau
-			erg.x = 3;
-			erg.y = 3;																		
+			erg.x = 52;
+			erg.y = 52;																		
 	}else if(pos.x>=0.05 && pos.x <0.75 &&pos.y <=0.105 && pos.y > -0.015) { // musik slider
 		if (pos.x >= 0.05 && pos.x < 0.19) {
-			erg.x = 5;
-			erg.y = 5;
+			erg.x = 53;
+			erg.y = 53;
 		}
 		if (pos.x >= 0.19 && pos.x < 0.33) {
-			erg.x = 6;
-			erg.y = 6;
+			erg.x = 54;
+			erg.y = 54;
 		}
 		if (pos.x >= 0.33 && pos.x < 0.47) {
-			erg.x = 7;
-			erg.y = 7;
+			erg.x = 55;
+			erg.y = 55;
 		}
 		if (pos.x >= 0.47 && pos.x < 0.61) {
-			erg.x = 8;
-			erg.y = 8;
+			erg.x = 56;
+			erg.y = 56;
 		}
 		if (pos.x >= 0.61 && pos.x < 0.75) {
-			erg.x = 9;
-			erg.y = 9;
+			erg.x = 57;
+			erg.y = 57;
 		}
 	}
 	else if (pos.x >= 0.05 && pos.x <0.75 && pos.y <= -0.335 && pos.y > -0.445) { // sfx slider
 		if (pos.x >= 0.05 && pos.x < 0.19) {
-			erg.x = 10;
-			erg.y = 10;
+			erg.x = 60;
+			erg.y = 60;
 		}
 		if (pos.x >= 0.19 && pos.x < 0.33) {
-			erg.x = 11;
-			erg.y = 11;
+			erg.x = 61;
+			erg.y = 61;
 		}
 		if (pos.x >= 0.33 && pos.x < 0.47) {
-			erg.x = 12;
-			erg.y = 12;
+			erg.x = 62;
+			erg.y = 62;
 		}
 		if (pos.x >= 0.47 && pos.x < 0.61) {
-			erg.x = 13;
-			erg.y = 13;
+			erg.x = 63;
+			erg.y = 63;
 		}
 		if (pos.x >= 0.61 && pos.x < 0.75) {
-			erg.x = 14;
-			erg.y = 14;
+			erg.x = 64;
+			erg.y = 64;
 		}
 
 	}
@@ -779,10 +779,10 @@ koordinate engine::Maus::Hauptmenue_klick(GL_koordinate pos) {
 koordinate engine::Maus::endscreen_klick(GL_koordinate pos) {
 	koordinate erg;
 	if (pos.x >= -0.65 && pos.x <-0.15 && pos.y <= -0.49 && pos.y > -0.62) { // Hauptmen¸
-		erg = { 1,1 };
+		erg = { 80,80 };
 	}
 	else if (pos.x >= 0.15 && pos.x < 0.65 && pos.y <= -0.49 && pos.y > -0.62){ // Neustart
-		erg = { 2,2 };
+		erg = { 81,81 };
 	}
 	else {
 		erg = { 100,100 };
