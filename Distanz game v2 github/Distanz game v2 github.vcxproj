@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\glew-2.1.0-win32\glew-2.1.0\include;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\include;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\lib\Win32-visualStudio;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\glew-2.1.0-win32\glew-2.1.0\include;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\include;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\lib\Win32-visualStudio;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -82,8 +82,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\glew-2.1.0-win32\glew-2.1.0\include;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\include;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\lib\Win32-visualStudio;C:\Users\Shadow\Desktop\Programieren\Distanz game v2 github\Distanz_Game_OpenGL_EAH_Jena\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\glew-2.1.0-win32\glew-2.1.0\include;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\include;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\irrKlang-32bit-1.6.0\irrKlang-1.6.0\lib\Win32-visualStudio;C:\Users\Shadow\Desktop\Programieren\distanz_game_eah\Lib\SDL2-devel-2.0.12-VC\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
